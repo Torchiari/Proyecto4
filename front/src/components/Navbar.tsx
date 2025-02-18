@@ -6,6 +6,7 @@ import { ImCart } from "react-icons/im";
 import { AiFillProduct } from "react-icons/ai";
 import { BsPersonVcard } from "react-icons/bs";
 import Swal from "sweetalert2";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
@@ -39,42 +40,42 @@ const Navbar = () => {
     <nav className="bg-gray-800 p-4 shadow-lg">
   <div className="container mx-auto flex justify-between items-center">
     {/* Logo */}
-    <a
+    <Link
       href="/"
       className="flex items-center text-2xl font-bold text-gray-200 hover:text-gray-400 space-x-2"
     >
       <GrApple className="text-4xl" />
       <span>iConnect</span>
-    </a>
+    </Link>
 
     {/* Navigation Links */}
     <ul className="hidden md:flex space-x-6 items-center">
       <li>
-        <a
+        <Link
           href="/product"
           className="flex items-center text-gray-300 text-lg font-medium hover:text-white transition duration-300"
         >
           <AiFillProduct className="text-4xl mr-2" /> Productos
-        </a>
+        </Link>
       </li>
     </ul>
 
     {/* Right Section */}
     <div className="hidden md:flex items-center space-x-6">
       {isAuthenticated && (
-        <a
+        <Link
           href="/dashboard"
           className="flex items-center text-gray-300 text-lg font-medium hover:text-white transition duration-300"
         >
           <BsPersonVcard className="text-4xl mr-2" /> Mi Cuenta
-        </a>
+        </Link>
       )}
-      <a
+      <Link
         href="/cart"
         className="flex items-center text-gray-300 text-lg font-medium hover:text-white transition duration-300"
       >
         <ImCart className="text-4xl mr-2" />
-      </a>
+      </Link>
       {isAuthenticated ? (
         <button
           onClick={handleSignOut}
@@ -84,18 +85,18 @@ const Navbar = () => {
         </button>
       ) : (
         <>
-          <a
+          <Link
             href="/login"
             className="text-gray-300 text-lg font-medium hover:text-white transition duration-300"
           >
             Iniciar sesión
-          </a>
-          <a
+          </Link>
+          <Link
             href="/register"
             className="text-gray-300 text-lg font-medium hover:text-white transition duration-300"
           >
             Registrarse
-          </a>
+          </Link>
         </>
       )}
     </div>

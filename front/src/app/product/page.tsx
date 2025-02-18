@@ -2,7 +2,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation"; 
 import { Product } from "../../interface/Response"; 
 import ProtectedRoute from "@/components/ProtectedRoute";
 import Swal from "sweetalert2";
@@ -10,7 +9,7 @@ import Products from "../server/product.server";
 
 const ProductPage = () => {
   const [products, setProducts] = useState<Product[]>([]); 
-  const router = useRouter();
+  
 
   useEffect(() => {
     const fetchData = async () => {
