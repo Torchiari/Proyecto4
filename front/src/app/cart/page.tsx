@@ -1,4 +1,4 @@
-
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 "use client";
 
 import { useEffect, useState } from "react";
@@ -98,7 +98,7 @@ const Cart = () => {
       Swal.fire({
         icon: "error",
         title: "Error",
-        text:  "Hubo un problema al procesar la compra.",
+        text: "Hubo un problema al procesar la compra.",
       });
     }
   };
