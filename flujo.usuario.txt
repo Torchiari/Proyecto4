@@ -1,0 +1,16 @@
+
+Página de inicio: Aquí el usuario puede ver una introducción o las categorías de productos, además de opciones para iniciar sesión o registrarse.
+
+Registro/Iniciar sesión: Si el usuario no está autenticado, debe tener la opción de crear una cuenta o iniciar sesión.
+
+Página principal de productos: Muestra la lista de productos disponibles o categorías principales.
+
+Página de detalles de producto: Muestra información detallada de cada producto (imágenes, descripción, precio, reseñas).
+
+Carrito de compras: Aquí el usuario revisa los productos seleccionados y puede ajustar cantidades o eliminar elementos.
+
+Proceso de pago: Una serie de pasos donde el usuario introduce su dirección de envío, selecciona el método de pago y revisa la orden.
+
+Confirmación de compra: Muestra un resumen de la orden y el número de confirmación.
+
+Perfil de usuario (opcional): Aquí el usuario podría gestionar su información, ver historial de compras, o modificar preferencias.
