@@ -94,7 +94,7 @@ const Cart = () => {
       setCartItems([]);
       setTotalAmount(0);
       localStorage.setItem("cart", JSON.stringify([]));
-    } catch (error) {
+    } catch {
       Swal.fire({
         icon: "error",
         title: "Error",
