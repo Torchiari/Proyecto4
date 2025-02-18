@@ -1,5 +1,4 @@
-/* eslint-disable @next/next/no-img-element /
-/ eslint-disable @typescript-eslint/no-unused-vars */
+
 "use client";
 
 import { useEffect, useState } from "react";
@@ -9,6 +8,7 @@ import CartServer from "../server/Cart.server";
 import Swal from "sweetalert2"
 import { Product } from "@/interface/Response";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState<(Product & { quantity: number })[]>([]);
@@ -123,7 +123,7 @@ const Cart = () => {
           {cartItems.map((item) => (
             <div key={item.id} className="flex items-center justify-between bg-gray-800 p-6 rounded-lg">
               <div className="flex items-center space-x-4">
-                <img src={item.image} alt={item.name} className="w-16 h-16 rounded-lg" />
+                <Image src={item.image} alt={item.name} className="w-16 h-16 rounded-lg" />
                 <div>
                   <h3 className="text-lg font-semibold">{item.name}</h3>
                   <p className="text-gray-400">Precio: ${item.price}</p>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -5,7 +6,7 @@ export default function Home() {
     <div className="min-h-screen bg-black relative">
       {/* Imagen de fondo */}
       <div className="absolute top-0 left-0 w-full h-full z-0">
-        <img 
+        <Image 
           src="/images/fondo.jpg"
           alt="Productos Apple" 
           className="w-full h-full object-cover opacity-60"
