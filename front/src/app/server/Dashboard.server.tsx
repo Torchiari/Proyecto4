@@ -11,7 +11,7 @@ export async function fetchUserOrders(token: string | null): Promise<{ user: Use
     throw new Error("Error al leer los datos del usuario");
   }
 
-  const response = await fetch("http://localhost:3002/users/orders", {
+  const response = await fetch("https://proyecto4-nm1r.onrender.com/users/orders", {
     method: "GET",
     headers: {
       Authorization: `${token}`,

@@ -2,7 +2,7 @@ import { Product } from "@/interface/Response";
 
 async function fetchProductById(id: number): Promise<Product | null> {
   try {
-    const response = await fetch(`http://localhost:3002/products`);
+    const response = await fetch(`https://proyecto4-nm1r.onrender.com/products`);
     const data: Product[] = await response.json();
     const product = data.find((item) => item.id === id);
     return product || null;
